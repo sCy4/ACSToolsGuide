@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; }
+  a { color:#3D5A9E; text-decoration:underline; text-underline-offset:2px; }
+  a:hover { color:#22345C; }
+</style>
+</helmet>
+<div style="background:#FEFCF8; min-height:100vh; font-family:'Noto Sans TC',system-ui,sans-serif; color:#2C3A57; -webkit-font-smoothing:antialiased;">
+  <div style="max-width:840px; margin:0 auto; padding:60px 26px 84px; text-align:center;">
+
+    <!-- 封面 -->
+    <div style="margin-bottom:70px;">
+      <div style="font-size:14px; font-weight:700; letter-spacing:8px; color:#B48A5A; margin-bottom:10px;">使用說明</div>
+      <h1 style="font-size:clamp(110px,27vw,264px); font-weight:900; margin:0; letter-spacing:-0.01em; line-height:0.86; color:#22345C; text-shadow:0 6px 0 rgba(44,68,120,0.08);">SPCM</h1>
+      <div style="width:180px; height:4px; margin:20px auto 20px; background:#B48A5A; border-radius:4px;"></div>
+      <p style="margin:0 auto 30px; max-width:480px; font-size:18px; font-weight:500; color:#5A6B8C; text-wrap:pretty;">四組快捷鍵，自動化四種常用的重複動作</p>
+
+      <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:9px;">
+          <kbd style="width:56px; height:56px; display:flex; align-items:center; justify-content:center; font-family:inherit; font-weight:900; font-size:28px; color:#22345C; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:4px solid #98abd1; border-radius:12px; box-shadow:0 3px 4px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">S</kbd>
+          <div style="font-size:12.5px; color:#8A97B0; line-height:1.5;"><b style="color:#5A6B8C;">Send</b><br>送出簡訊</div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:9px;">
+          <kbd style="width:56px; height:56px; display:flex; align-items:center; justify-content:center; font-family:inherit; font-weight:900; font-size:28px; color:#22345C; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:4px solid #98abd1; border-radius:12px; box-shadow:0 3px 4px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">P</kbd>
+          <div style="font-size:12.5px; color:#8A97B0; line-height:1.5;"><b style="color:#5A6B8C;">Photo</b><br>上傳簽收圖片</div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:9px;">
+          <kbd style="width:56px; height:56px; display:flex; align-items:center; justify-content:center; font-family:inherit; font-weight:900; font-size:28px; color:#22345C; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:4px solid #98abd1; border-radius:12px; box-shadow:0 3px 4px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">C</kbd>
+          <div style="font-size:12.5px; color:#8A97B0; line-height:1.5;"><b style="color:#5A6B8C;">Check</b><br>追蹤查詢</div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:9px;">
+          <kbd style="width:56px; height:56px; display:flex; align-items:center; justify-content:center; font-family:inherit; font-weight:900; font-size:28px; color:#22345C; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:4px solid #98abd1; border-radius:12px; box-shadow:0 3px 4px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">M</kbd>
+          <div style="font-size:12.5px; color:#8A97B0; line-height:1.5;"><b style="color:#5A6B8C;">Moto</b><br>導出外務派件單號</div>
+        </div>
+      </div>
+
+      <div style="margin-top:26px; display:inline-flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:center; font-size:14.5px; color:#8A97B0;">
+        <span>按下</span>
+        <span style="display:inline-flex; align-items:center; gap:8px;">
+          <span style="display:inline-flex; align-items:center; justify-content:center; min-width:30px; padding:7px 12px; font-weight:700; font-size:14px; line-height:1; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Ctrl</span>
+          <span style="color:#9aa7c4; font-weight:700;">+</span>
+          <span style="display:inline-flex; align-items:center; justify-content:center; min-width:30px; padding:7px 12px; font-weight:700; font-size:14px; line-height:1; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Win</span>
+          <span style="color:#9aa7c4; font-weight:700;">+</span>
+          <span style="display:inline-flex; align-items:center; justify-content:center; min-width:30px; padding:7px 12px; font-weight:700; font-size:14px; line-height:1; color:#243a63; background:linear-gradient(180deg,#f4f7fe 0%,#e4ebfa 100%); border:1.5px dashed #98abd1; border-radius:8px;">對應字母</span>
+        </span>
+        <span>即可啟動</span>
+      </div>
+    </div>
+
+    <!-- 一、四種功能 -->
+    <section style="margin-bottom:76px;">
+      <div style="margin-bottom:40px;">
+        <div style="font-size:12.5px; font-weight:700; letter-spacing:6px; color:#B48A5A; margin-bottom:6px;">FEATURES</div>
+        <h2 style="font-size:34px; font-weight:900; margin:0; letter-spacing:2px; color:#22345C;">四種功能</h2>
+        <div style="width:44px; height:3px; margin:14px auto 0; background:#C7D3EA; border-radius:3px;"></div>
+      </div>
+
+      <!-- S 送出簡訊 -->
+      <div style="background:#FFFFFF; border:2px solid #ECEFF6; border-radius:22px; padding:34px 34px 30px; margin-bottom:26px; box-shadow:0 8px 26px rgba(44,68,120,0.06);">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:12px; margin-bottom:24px;">
+          <div style="width:62px; height:62px; border-radius:16px; background:linear-gradient(180deg,#3556A0,#22345C); color:#fff; font-weight:900; font-size:34px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 16px rgba(44,68,120,0.28), inset 0 2px 0 rgba(255,255,255,.22);">S</div>
+          <div>
+            <div style="font-size:24px; font-weight:900; letter-spacing:1px; color:#22345C;">送出簡訊</div>
+            <div style="display:inline-block; font-size:14px; color:#5A6B8C; background:linear-gradient(transparent 58%, #E7EEFB 58%); padding:0 6px; margin-top:6px;">不用每次送出簡訊都點 7 次「下一步」和「確定」了</div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px; max-width:540px; margin:0 auto; text-align:left;">
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">1</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">在「宏遠電訊簡訊平台」中，填好簡訊內容與「手動輸入」的電話</div>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">2</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:2.1; padding-top:1px;">按下 <span style="display:inline-flex; align-items:center; gap:8px; vertical-align:middle;"><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Ctrl</kbd><span style="color:#9aa7c4; font-weight:700; font-size:14px;">+</span><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Win</kbd><span style="color:#9aa7c4; font-weight:700; font-size:14px;">+</span><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">S</kbd></span></div>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">3</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">腳本會自動按下接下來的 7 次「下一步」和「確定」，直接送出簡訊</div>
+          </div>
+        </div>
+        <sc-if value="{{ showS }}" hint-placeholder-val="{{ true }}">
+          <div style="margin-top:22px;">
+            <div style="font-size:13px; font-weight:700; letter-spacing:2px; color:#7E93BD; margin-bottom:9px;">▶ 操作影片</div>
+            <div style="position:relative; width:100%; padding-top:56.25%; border:2px solid #22345C; border-radius:14px; background:#0E1522; overflow:hidden;">
+              <iframe src="{{ urlS }}" title="操作影片" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <!-- P 上傳簽收圖片 -->
+      <div style="background:#FFFFFF; border:2px solid #ECEFF6; border-radius:22px; padding:34px 34px 30px; margin-bottom:26px; box-shadow:0 8px 26px rgba(44,68,120,0.06);">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:12px; margin-bottom:24px;">
+          <div style="width:62px; height:62px; border-radius:16px; background:linear-gradient(180deg,#3556A0,#22345C); color:#fff; font-weight:900; font-size:34px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 16px rgba(44,68,120,0.28), inset 0 2px 0 rgba(255,255,255,.22);">P</div>
+          <div>
+            <div style="font-size:24px; font-weight:900; letter-spacing:1px; color:#22345C;">上傳簽收圖片</div>
+            <div style="display:inline-block; font-size:14px; color:#5A6B8C; background:linear-gradient(transparent 58%, #E7EEFB 58%); padding:0 6px; margin-top:6px;">一鍵把桌面「客指定位」簽收圖片上傳到哲盟</div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px; max-width:540px; margin:0 auto; text-align:left;">
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">1</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">確認哲盟已開啟，且「提單圖片管理」視窗未開啟</div>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">2</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:2.1; padding-top:1px;">按下 <span style="display:inline-flex; align-items:center; gap:8px; vertical-align:middle;"><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Ctrl</kbd><span style="color:#9aa7c4; font-weight:700; font-size:14px;">+</span><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Win</kbd><span style="color:#9aa7c4; font-weight:700; font-size:14px;">+</span><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">P</kbd></span></div>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">3</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">腳本會跳轉到哲盟，開啟「提單圖片管理」並上傳圖片</div>
+          </div>
+        </div>
+        <sc-if value="{{ showP }}" hint-placeholder-val="{{ true }}">
+          <div style="margin-top:22px;">
+            <div style="font-size:13px; font-weight:700; letter-spacing:2px; color:#7E93BD; margin-bottom:9px;">▶ 操作影片</div>
+            <div style="position:relative; width:100%; padding-top:56.25%; border:2px solid #22345C; border-radius:14px; background:#0E1522; overflow:hidden;">
+              <iframe src="{{ urlP }}" title="操作影片" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <!-- C 追蹤查詢 -->
+      <div style="background:#FFFFFF; border:2px solid #ECEFF6; border-radius:22px; padding:34px 34px 30px; margin-bottom:26px; box-shadow:0 8px 26px rgba(44,68,120,0.06);">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:12px; margin-bottom:24px;">
+          <div style="width:62px; height:62px; border-radius:16px; background:linear-gradient(180deg,#3556A0,#22345C); color:#fff; font-weight:900; font-size:34px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 16px rgba(44,68,120,0.28), inset 0 2px 0 rgba(255,255,255,.22);">C</div>
+          <div>
+            <div style="font-size:24px; font-weight:900; letter-spacing:1px; color:#22345C;">追蹤查詢</div>
+            <div style="display:inline-block; font-size:14px; color:#5A6B8C; background:linear-gradient(transparent 58%, #E7EEFB 58%); padding:0 6px; margin-top:6px;">更簡單快速查詢單號的方法</div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px; max-width:540px; margin:0 auto; text-align:left;">
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">1</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">確認哲盟已開啟，且「追蹤查詢」視窗已開啟</div>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">2</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">反白選取你要在哲盟系統中查詢的單號</div>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">3</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:2.1; padding-top:1px;">按下 <span style="display:inline-flex; align-items:center; gap:8px; vertical-align:middle;"><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Ctrl</kbd><span style="color:#9aa7c4; font-weight:700; font-size:14px;">+</span><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Win</kbd><span style="color:#9aa7c4; font-weight:700; font-size:14px;">+</span><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">C</kbd></span></div>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">4</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">腳本會跳轉到哲盟的「追蹤查詢」並查詢此單號</div>
+          </div>
+        </div>
+        <div style="margin:18px auto 0; max-width:500px; display:flex; align-items:flex-start; gap:8px; font-size:13.5px; color:#8A7A5E; border-top:1.5px dashed #E4D9C2; padding-top:12px; text-align:left;">
+          <span style="color:#B48A5A; font-weight:700;">✎</span>
+          <span>沒選取單號時，腳本會自動使用剪貼簿中的單號做查詢</span>
+        </div>
+        <sc-if value="{{ showC }}" hint-placeholder-val="{{ true }}">
+          <div style="margin-top:22px;">
+            <div style="font-size:13px; font-weight:700; letter-spacing:2px; color:#7E93BD; margin-bottom:9px;">▶ 操作影片</div>
+            <div style="position:relative; width:100%; padding-top:56.25%; border:2px solid #22345C; border-radius:14px; background:#0E1522; overflow:hidden;">
+              <iframe src="{{ urlC }}" title="操作影片" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <!-- M 導出外務派件單號 -->
+      <div style="background:#FFFFFF; border:2px solid #ECEFF6; border-radius:22px; padding:34px 34px 30px; margin-bottom:30px; box-shadow:0 8px 26px rgba(44,68,120,0.06);">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:12px; margin-bottom:24px;">
+          <div style="width:62px; height:62px; border-radius:16px; background:linear-gradient(180deg,#3556A0,#22345C); color:#fff; font-weight:900; font-size:34px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 16px rgba(44,68,120,0.28), inset 0 2px 0 rgba(255,255,255,.22);">M</div>
+          <div>
+            <div style="font-size:24px; font-weight:900; letter-spacing:1px; color:#22345C;">導出外務派件單號</div>
+            <div style="display:inline-block; font-size:14px; color:#5A6B8C; background:linear-gradient(transparent 58%, #E7EEFB 58%); padding:0 6px; margin-top:6px;">做機車派件的簽收導入時，快速取得他的當日派件單號</div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px; max-width:540px; margin:0 auto; text-align:left;">
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">1</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">確認哲盟已開啟，且「簽收監控」視窗未開啟</div>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">2</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:2.1; padding-top:1px;">按下 <span style="display:inline-flex; align-items:center; gap:8px; vertical-align:middle;"><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Ctrl</kbd><span style="color:#9aa7c4; font-weight:700; font-size:14px;">+</span><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">Win</kbd><span style="color:#9aa7c4; font-weight:700; font-size:14px;">+</span><kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">M</kbd></span>，在輸入框填入外務編號後「執行」</div>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">3</span>
+            <div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">腳本會把該外務的當日派件單號導出成 Excel 存在桌面，檔名為「外務編號.月日」</div>
+          </div>
+        </div>
+        <sc-if value="{{ showM }}" hint-placeholder-val="{{ true }}">
+          <div style="margin-top:22px;">
+            <div style="font-size:13px; font-weight:700; letter-spacing:2px; color:#7E93BD; margin-bottom:9px;">▶ 操作影片</div>
+            <div style="position:relative; width:100%; padding-top:56.25%; border:2px solid #22345C; border-radius:14px; background:#0E1522; overflow:hidden;">
+              <iframe src="{{ urlM }}" title="操作影片" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <!-- 緊急重啟 -->
+      <div style="max-width:560px; margin:0 auto; display:flex; align-items:center; gap:16px; justify-content:center; flex-wrap:wrap; border:2px solid #EBE1CC; background:#FBF6EC; border-radius:18px; padding:18px 26px; color:#7A6543;">
+        <kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:30px; padding:8px 14px; font-family:inherit; font-weight:700; font-size:15px; line-height:1; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">F10</kbd>
+        <div style="font-size:15px; line-height:2; text-align:left;"> 當腳本卡住了，或是操作失誤了，按下 <kbd style="display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff; vertical-align:middle;">F10</kbd> 即可立刻重啟腳本</div>
+      </div>
+    </section>
+
+    <!-- 二、如何安裝 -->
+    <section style="margin-bottom:64px;">
+      <div style="margin-bottom:34px;">
+        <div style="font-size:12.5px; font-weight:700; letter-spacing:6px; color:#B48A5A; margin-bottom:6px;">INSTALL</div>
+        <h2 style="font-size:34px; font-weight:900; margin:0; letter-spacing:2px; color:#22345C;">如何安裝</h2>
+        <div style="width:44px; height:3px; margin:14px auto 0; background:#C7D3EA; border-radius:3px;"></div>
+      </div>
+      <div style="display:flex; justify-content:center; align-items:stretch; gap:20px; flex-wrap:wrap;">
+        <div style="width:220px; background:#FFFFFF; border:2px solid #ECEFF6; border-radius:18px; padding:26px 20px; box-shadow:0 8px 26px rgba(44,68,120,0.06);">
+          <div style="width:44px; height:44px; margin:0 auto 12px; border-radius:12px; background:linear-gradient(180deg,#3556A0,#22345C); color:#fff; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center;">1</div>
+          <div style="font-size:15px; color:#42506E; line-height:1.7;">取得 SPCM.exe，放到桌面</div>
+        </div>
+        <div style="width:220px; background:#FFFFFF; border:2px solid #ECEFF6; border-radius:18px; padding:26px 20px; box-shadow:0 8px 26px rgba(44,68,120,0.06);">
+          <div style="width:44px; height:44px; margin:0 auto 12px; border-radius:12px; background:linear-gradient(180deg,#3556A0,#22345C); color:#fff; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center;">2</div>
+          <div style="font-size:15px; color:#42506E; line-height:1.7;">雙擊 SPCM.exe 啟動</div>
+        </div>
+      </div>
+    </section>
+
+    <div style="width:36px; height:3px; margin:0 auto 12px; background:#C7D3EA; border-radius:3px;"></div>
+    <div style="font-size:13px; color:#8A97B0;">© 蘇宗彥 · ACS 台北站</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:880,&quot;height&quot;:1500},&quot;showVideos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;操作影片&quot;},&quot;vidS&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;djthzCKGZC0&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;操作影片&quot;},&quot;vidP&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;agTRxXn-1pc&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;操作影片&quot;},&quot;vidC&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;pNqL5Xv5-0I&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;操作影片&quot;},&quot;vidM&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;dzrtbfmUDMY&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;操作影片&quot;}}">
+class Component extends DCLogic {
+  renderVals(){
+    var show = this.props.showVideos !== false;
+    var mk = function(id){
+      id = (id || "").trim();
+      if (!show || !id) return { show:false, url:"" };
+      return { show:true, url:"https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) };
+    };
+    var s = mk(this.props.vidS ?? "djthzCKGZC0");
+    var p = mk(this.props.vidP ?? "agTRxXn-1pc");
+    var c = mk(this.props.vidC ?? "pNqL5Xv5-0I");
+    var m = mk(this.props.vidM ?? "dzrtbfmUDMY");
+    return {
+      showS:s.show, urlS:s.url,
+      showP:p.show, urlP:p.url,
+      showC:c.show, urlC:c.url,
+      showM:m.show, urlM:m.url
+    };
+  }
+}
+</script>
+</body>
+</html>
