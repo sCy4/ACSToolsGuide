@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check 使用說明</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#FEFCF8; color:#2C3A57; font-family:"Noto Sans TC",system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:#3D5A9E; text-decoration:underline; text-underline-offset:2px; }
+  a:hover { color:#22345C; }
+  .kbd { display:inline-flex; align-items:center; justify-content:center; min-width:28px; padding:6px 11px; font-family:inherit; font-weight:700; font-size:14px; line-height:1; letter-spacing:.5px; color:#243a63; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:3px solid #98abd1; border-radius:8px; box-shadow:0 2px 3px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff; vertical-align:middle; }
+  .combo { display:inline-flex; align-items:center; gap:8px; vertical-align:middle; }
+  .plus { color:#9aa7c4; font-weight:700; font-size:14px; }
+  .step { display:flex; gap:13px; align-items:flex-start; }
+  .num { flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#2C4478; color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+  .card { background:#FFFFFF; border:2px solid #ECEFF6; border-radius:22px; padding:34px 34px 30px; margin-bottom:26px; box-shadow:0 8px 26px rgba(44,68,120,0.06); }
+  .badge { width:62px; height:62px; border-radius:16px; background:linear-gradient(180deg,#3556A0,#22345C); color:#fff; font-weight:900; font-size:34px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 16px rgba(44,68,120,0.28), inset 0 2px 0 rgba(255,255,255,.22); }
+</style>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   ✎ 可編輯設定區 —— 只需修改這裡，網頁會自動套用
+   ──────────────────────────────────────────────────────────────
+   SHOW_VIDEOS：要不要顯示操作影片區塊（true 顯示 / false 隱藏）
+   vid_C：追蹤查詢的 YouTube 影片 ID（不是整段網址，只要 ID）
+          例：網址 https://www.youtube.com/watch?v=dQw4w9WgXcQ → 填 "dQw4w9WgXcQ"
+          留空 "" 影片就不會顯示
+   ══════════════════════════════════════════════════════════════ */
+var T = {
+  SHOW_VIDEOS: true,
+  vid_C: "pNqL5Xv5-0I"   // 追蹤查詢
+};
+</script>
+</head>
+<body>
+
+<div style="max-width:840px; margin:0 auto; padding:60px 26px 84px; text-align:center;">
+
+  <!-- 封面 -->
+  <div style="margin-bottom:70px;">
+    <div style="font-size:20px; font-weight:700; letter-spacing:8px; color:#B48A5A; margin-bottom:10px;">使用說明</div>
+    <h1 style="font-size:clamp(84px,20vw,196px); font-weight:900; margin:0; letter-spacing:-0.01em; line-height:0.86; color:#22345C; text-shadow:0 6px 0 rgba(44,68,120,0.08);">Check</h1>
+    <div style="width:180px; height:4px; margin:20px auto 20px; background:#B48A5A; border-radius:4px;"></div>
+    <p style="margin:0 auto 34px; max-width:520px; font-size:18px; font-weight:500; color:#5A6B8C; text-wrap:pretty;">複製單號 → 跳轉哲盟 → 選中單號欄位 → 貼上單號 → 按查詢<br>現在這一套動作只要按一下快捷鍵瞬間完成<br><span style="font-size:14.5px; color:#8A97B0;">（此為 SPCM 腳本的「C」功能單獨拉出來使用）</span></p>
+
+    <div style="display:flex; justify-content:center;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:11px;">
+        <kbd style="width:72px; height:72px; display:flex; align-items:center; justify-content:center; font-family:inherit; font-weight:900; font-size:36px; color:#22345C; background:linear-gradient(180deg,#ffffff 0%,#eef2fb 100%); border:1.5px solid #bcc9e4; border-bottom:5px solid #98abd1; border-radius:14px; box-shadow:0 3px 5px rgba(44,68,120,0.14), inset 0 1px 0 #ffffff;">C</kbd>
+        <div style="font-size:13px; color:#8A97B0; line-height:1.5;"><b style="color:#5A6B8C;">Check</b><br>追蹤查詢</div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px; display:inline-flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:center; font-size:14.5px; color:#8A97B0;">
+      <span>按下</span>
+      <span class="combo">
+        <span class="kbd">Ctrl</span><span class="plus">+</span><span class="kbd">Win</span><span class="plus">+</span><span class="kbd">C</span>
+      </span>
+      <span>啟動</span>
+    </div>
+  </div>
+
+  <!-- 一、如何使用 -->
+  <section style="margin-bottom:76px;">
+    <div style="margin-bottom:40px;">
+      <div style="font-size:12.5px; font-weight:700; letter-spacing:6px; color:#B48A5A; margin-bottom:6px;">HOW TO USE</div>
+      <h2 style="font-size:34px; font-weight:900; margin:0; letter-spacing:2px; color:#22345C;">如何使用</h2>
+      <div style="width:44px; height:3px; margin:14px auto 0; background:#C7D3EA; border-radius:3px;"></div>
+    </div>
+
+    <!-- C 追蹤查詢 -->
+    <div class="card" style="margin-bottom:30px;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:12px; margin-bottom:24px;">
+        <div class="badge">C</div>
+        <div>
+          <div style="font-size:24px; font-weight:900; letter-spacing:1px; color:#22345C;">追蹤查詢</div>
+          <div style="display:inline-block; font-size:14px; color:#5A6B8C; background:linear-gradient(transparent 58%, #E7EEFB 58%); padding:0 6px; margin-top:6px;">更簡單快速查詢單號的方法</div>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; max-width:540px; margin:0 auto; text-align:left;">
+        <div class="step"><span class="num">1</span><div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">確認哲盟已開啟，且「追蹤查詢」視窗已開啟</div></div>
+        <div class="step"><span class="num">2</span><div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">反白選取你要查詢的單號（在哲盟表格、Chrome、LINE、Excel...都可以）</div></div>
+        <div class="step"><span class="num">3</span><div style="font-size:15.5px; color:#42506E; line-height:2.1; padding-top:1px;">按下 <span class="combo"><kbd class="kbd">Ctrl</kbd><span class="plus">+</span><kbd class="kbd">Win</kbd><span class="plus">+</span><kbd class="kbd">C</kbd></span></div></div>
+        <div class="step"><span class="num">4</span><div style="font-size:15.5px; color:#42506E; line-height:1.7; padding-top:2px;">腳本會跳轉到哲盟的「追蹤查詢」並查詢此單號</div></div>
+      </div>
+      <div style="margin:18px auto 0; max-width:500px; display:flex; align-items:flex-start; gap:8px; font-size:13.5px; color:#8A7A5E; border-top:1.5px dashed #E4D9C2; padding-top:12px; text-align:left;">
+        <span style="color:#B48A5A; font-weight:700;">✎</span>
+        <span>沒選取單號時，腳本會自動使用剪貼簿中的單號做查詢</span>
+      </div>
+      <div data-video="vid_C" style="margin-top:22px;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:2px; color:#7E93BD; margin-bottom:9px;">▶ 操作影片</div>
+        <div class="video-box" style="position:relative; width:100%; padding-top:56.25%; border:2px solid #22345C; border-radius:14px; background:#0E1522; overflow:hidden;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 二、如何安裝 -->
+  <section style="margin-bottom:64px;">
+    <div style="margin-bottom:34px;">
+      <div style="font-size:12.5px; font-weight:700; letter-spacing:6px; color:#B48A5A; margin-bottom:6px;">INSTALL</div>
+      <h2 style="font-size:34px; font-weight:900; margin:0; letter-spacing:2px; color:#22345C;">如何安裝</h2>
+      <div style="width:44px; height:3px; margin:14px auto 0; background:#C7D3EA; border-radius:3px;"></div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:stretch; gap:20px; flex-wrap:wrap;">
+      <div style="width:220px; background:#FFFFFF; border:2px solid #ECEFF6; border-radius:18px; padding:26px 20px; box-shadow:0 8px 26px rgba(44,68,120,0.06);">
+        <div style="width:44px; height:44px; margin:0 auto 12px; border-radius:12px; background:linear-gradient(180deg,#3556A0,#22345C); color:#fff; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center;">1</div>
+        <div style="font-size:15px; color:#42506E; line-height:1.7;">取得 Check.exe，放到桌面</div>
+      </div>
+      <div style="width:220px; background:#FFFFFF; border:2px solid #ECEFF6; border-radius:18px; padding:26px 20px; box-shadow:0 8px 26px rgba(44,68,120,0.06);">
+        <div style="width:44px; height:44px; margin:0 auto 12px; border-radius:12px; background:linear-gradient(180deg,#3556A0,#22345C); color:#fff; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center;">2</div>
+        <div style="font-size:15px; color:#42506E; line-height:1.7;">雙擊 Check.exe 啟動</div>
+      </div>
+    </div>
+  </section>
+
+  <div style="width:36px; height:3px; margin:0 auto 12px; background:#C7D3EA; border-radius:3px;"></div>
+  <div style="font-size:13px; color:#8A97B0;">© 蘇宗彥 · ACS 台北站</div>
+</div>
+
+<script>
+/* 影片：把上面 T 設定的 YouTube 影片 ID 變成嵌入播放器 */
+(function(){
+  document.querySelectorAll("[data-video]").forEach(function(wrap){
+    var id = (T[wrap.getAttribute("data-video")] || "").trim();
+    var box = wrap.querySelector(".video-box");
+    if (!T.SHOW_VIDEOS || !id) { wrap.style.display = "none"; return; }
+    var url = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id);
+    box.innerHTML =
+      "<iframe src='" + url + "' title='操作影片' loading='lazy' " +
+      "allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen " +
+      "style='position:absolute; top:0; left:0; width:100%; height:100%; border:0;'></iframe>";
+  });
+})();
+</script>
+
+</body>
+</html>
